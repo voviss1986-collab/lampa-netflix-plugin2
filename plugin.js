@@ -7,13 +7,15 @@
 
     function openPage() {
         const page = document.createElement('div');
+
         page.style.background = '#141414';
         page.style.color = '#fff';
         page.style.padding = '30px';
+        page.style.fontSize = '18px';
 
         page.innerHTML = `
-            <h1>🎬 Плагин работает!</h1>
-            <p>Если ты видишь это — значит плагин загружен и проверен.</p>
+            <h1 style="font-size:28px; margin-bottom:15px;">🎬 Плагин работает!</h1>
+            <p>Если ты видишь этот экран — плагин успешно загружен и функционирует.</p>
         `;
 
         Lampa.Activity.push({
@@ -26,7 +28,7 @@
     Lampa.Plugin.add(pluginName, {
         name: 'Тест Netflix-плагина',
         description: 'Проверка работы в браузере и на TV',
-        version: '1.0',
+        version: '1.0.0',
 
         onStart: function () {
             Lampa.Menu.add({

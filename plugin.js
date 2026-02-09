@@ -7,14 +7,13 @@
 
     function openPage() {
         const page = document.createElement('div');
-
         page.style.background = '#141414';
         page.style.color = '#fff';
         page.style.padding = '30px';
 
         page.innerHTML = `
-            <h1 style="margin-bottom: 15px; font-size: 26px;">🎬 Плагин работает!</h1>
-            <p>Если ты видишь этот экран — значит плагин загружен и успешно работает.</p>
+            <h1 style="font-size: 24px; margin-bottom: 10px;">🎬 Плагин работает!</h1>
+            <p>Если ты видишь этот экран — значит плагин успешно загружен и работает.</p>
         `;
 
         Lampa.Activity.push({

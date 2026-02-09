@@ -1,10 +1,7 @@
 (function () {
     'use strict';
 
-    if (!window.Lampa) {
-        console.log('Lampa not found');
-        return;
-    }
+    if (!window.Lampa) return;
 
     const pluginName = 'netflix_test_plugin';
 
@@ -15,10 +12,8 @@
         page.style.padding = '30px';
 
         page.innerHTML = `
-            <h1>🎬 Плагин работает</h1>
-            <p>Если ты видишь этот экран — плагин успешно загружен.</p>
-            <p>Среда: <b>${Lampa.Platform.tv() ? 'TV' : 'Browser'}</b></p>
-            <p>Версия Lampa: <b>${Lampa.Version}</b></p>
+            <h1>🎬 Плагин работает!</h1>
+            <p>Если ты видишь это — значит плагин загружен и проверен.</p>
         `;
 
         Lampa.Activity.push({
@@ -30,12 +25,10 @@
 
     Lampa.Plugin.add(pluginName, {
         name: 'Тест Netflix-плагина',
-        description: 'Проверка работы в браузере',
-        version: '0.1',
+        description: 'Проверка работы в браузере и на TV',
+        version: '1.0',
 
         onStart: function () {
-            console.log('[Plugin] started');
-
             Lampa.Menu.add({
                 title: '🧪 Тест плагина',
                 onSelect: openPage
